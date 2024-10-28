@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+ 	<!-- Bean as a tag -->   
+    <bean class="com.Employee" id="e1">
+		<property name="id">
+			<value>1</value>
+		</property>
+		<property name="name">
+			<value>Raja</value>
+		</property>
+		<property name="job">
+			<value>Developer</value>
+		</property>
+		<property name="sal">
+			<value>15000</value>
+		</property>
+	</bean>
+	
+	<!-- Bean as a Attribute -->
+	<bean class="com.Employee" id="e2">
+		<property name="id" value="2"></property>
+		<property name="name" value="Roja"></property>
+		<property name="job" value="Tester"></property>
+		<property name="sal" value="15000"></property>
+	</bean>
+	
+	<!-- Bean as a Property Schema -->
+	<bean class="com.Employee" id="e3" p:id="3" p:name="Rajo" p:job="Both" p:sal="30000"></bean>
+</beans>

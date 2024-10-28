@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+ 	
+ 	<bean class="carEngine.Engine" id="e" c:type="petrol" c:cc="1000CC" c:hp="500" c:engineNo="3456etw"></bean>
+ 	<bean class="carEngine.Car" id="c"  c:brand="BMW" c:model="A8" c:carNo="TN01I2026" c:price="30000000">
+		<constructor-arg name="engine" ref="e"></constructor-arg>
+	</bean>
+</beans>
+
+<!-- 
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+ 	
+ 	<bean class="carEngine.Engine" id="e" p:type="petrol" p:cc="1000CC" p:hp="500" p:engineNo="3456etw"></bean>
+ 	<bean class="carEngine.Car" id="c"  p:brand="BMW" p:model="A8" p:carNo="TN01I2026" p:price="30000000">
+		<property name="engine" ref="e"></property>
+	</bean>
+</beans>
+-->
